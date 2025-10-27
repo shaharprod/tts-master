@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ממיר טקסט לדיבור בעברית - Hebrew TTS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎤 ממיר טקסט לדיבור בעברית</h1>
+            <p>הכנס טקסט בעברית והקשיב לו בקול ברור</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea
+                    id="textInput"
+                    placeholder="הכנס כאן את הטקסט שברצונך לשמוע..."
+                    rows="6"
+                ></textarea>
+
+                <div class="controls">
+                    <div class="voice-controls">
+                        <label for="voiceSelect">בחר קול:</label>
+                        <select id="voiceSelect">
+                            <option value="">קול ברירת מחדל</option>
+                        </select>
+                    </div>
+
+                    <div class="speed-controls">
+                        <label for="speedRange">מהירות דיבור:</label>
+                        <input type="range" id="speedRange" min="0.5" max="2" step="0.1" value="1">
+                        <span id="speedValue">1.0</span>
+                    </div>
+
+                    <div class="pitch-controls">
+                        <label for="pitchRange">גובה קול:</label>
+                        <input type="range" id="pitchRange" min="0.5" max="2" step="0.1" value="1">
+                        <span id="pitchValue">1.0</span>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button id="playBtn" class="btn btn-primary">
+                        <span class="btn-icon">▶️</span>
+                        השמע טקסט
+                    </button>
+                    <button id="pauseBtn" class="btn btn-secondary" disabled>
+                        <span class="btn-icon">⏸️</span>
+                        השהייה
+                    </button>
+                    <button id="stopBtn" class="btn btn-secondary" disabled>
+                        <span class="btn-icon">⏹️</span>
+                        עצירה
+                    </button>
+                    <button id="clearBtn" class="btn btn-outline">
+                        <span class="btn-icon">🗑️</span>
+                        נקה טקסט
+                    </button>
+                </div>
+            </div>
+
+            <div class="examples-section">
+                <h3>דוגמאות טקסט:</h3>
+                <div class="examples">
+                    <button class="example-btn" data-text="שלום! ברוכים הבאים לממיר הטקסט לדיבור בעברית. זהו כלי נהדר להאזנה לטקסטים בעברית.">
+                        דוגמה בסיסית
+                    </button>
+                    <button class="example-btn" data-text="הטכנולוגיה המתקדמת מאפשרת לנו להמיר טקסט לדיבור בצורה טבעית וברורה. זה עוזר לאנשים עם קשיי קריאה או למי שרוצה להאזין לטקסטים בזמן נסיעה.">
+                        דוגמה מתקדמת
+                    </button>
+                    <button class="example-btn" data-text="מערכת ההפעלה של המחשב כוללת רכיבים רבים: מעבד, זיכרון, כונן קשיח, כרטיס מסך ועוד. כל רכיב חשוב לתפקוד התקין של המחשב.">
+                        דוגמה טכנית
+                    </button>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>מידע על הכלי:</h3>
+                <ul>
+                    <li>✅ תומך בעברית מלאה</li>
+                    <li>✅ מהירות דיבור מותאמת אישית</li>
+                    <li>✅ גובה קול מותאם</li>
+                    <li>✅ קולות שונים זמינים</li>
+                    <li>✅ עובד בכל הדפדפנים המודרניים</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>נבנה עם ❤️ עבור דוברי העברית | זמין ב-<a href="https://shaharprod.github.io/tts-master/" target="_blank">GitHub Pages</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
